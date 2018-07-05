@@ -89,7 +89,7 @@ switch ($data->type) {
           break;
           
         case 'red':
-          $user = vkapi('users.get', array('access_token' => SERVICE_ACCESS_TOKEN))['response'][0];
+          $user = getUser($user_id);
           send($peer_id, "{$user['first_name']}, ты нажал кнопку \"Green\"!", '', KEYBOARD_DEFAULT);
           break;
           
