@@ -50,13 +50,8 @@ function send($peer_id, $message, $attachment = '', $keyboard = '{"one_time": fa
 }
 function getUser($user_id, $fields = 'sex', $name_case = 'nom')
 {
-	$params['user_ids'] = $user_id;
-	$params['fields'] = $fields;
-	$params['name_case'] = $name_case;
-	$params['access_token'] = ACCESS_TOKEN;
-	$params['v'] = VKAPI_VERSION;
+	$response = vkapi('users.get', ['user_ids' => $user_id, 'fields' => $fields, 'name_case' => $name_case]);
 
-	$response = json_decode(file_get_contents("https://api.vk.com/method/users.get?".http_build_query($params)), true);
 	return $response['response'][0];
 }
 
