@@ -18,7 +18,7 @@ if($data->secret != SECRET_KEY) {
 	echo '{"error": {"error_code": 1, "error_msg": "Security error: secret is invalid"}}';
 	exit();
 }
-if($data->secret != GROUP_ID) {
+if($data->group_id != GROUP_ID) {
 	header("Content-type:application/json");
 	echo '{"error": {"error_code": 3, "error_msg": "Security error: group_id is invalid"}}';
 	exit();
