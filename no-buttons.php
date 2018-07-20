@@ -3,7 +3,7 @@
 define("VKAPI_VERSION", "5.80");
 define("ACCESS_TOKEN", ""); // токен группы
 define("USER_ACCESS_TOKEN", ""); // vk.cc/8eulLN
-define('SERVICE_ACCESS_TOKEN', ''); // сервисный ключ доступа
+define('SERVICE_ACCESS_TOKEN', ""); // сервисный ключ доступа
 define("CONFIRMATION_TOKEN", ""); // строка, которую должен вернуть сервер
 define("SECRET_KEY", ""); // секретный ключ
 define("GROUP_ID", 0); // ид группы
